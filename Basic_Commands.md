@@ -10,6 +10,7 @@
 
     kubectl version  
     kubectl cluster-info  
+    kubectl top // Metrics
     kubectl get nodes   
     kubectl get all  
 
@@ -35,6 +36,9 @@
     kubectl logs -l run=my-apache  //only 5 pods at a time but can be increased
     kubectl describe pod {pod-name}
     kubectl delete pod/{pod-name}
+    
+    kubectl delete deployment nginx-dep
+    kubectl delete deployment my-apache
     
 #### Debug
     kubectl logs {pod-name}   
