@@ -27,6 +27,7 @@
     kubectl create deployment nginx-dep --image=nginx   
     kubectl get deployment   
     kubectl get replicaset   
+    kubectl get services
     kubectl edit deployment nginx-dep   
     
     kubectl create deployment my-apache --image=httpd
