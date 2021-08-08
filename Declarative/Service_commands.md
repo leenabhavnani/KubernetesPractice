@@ -1,3 +1,9 @@
+### Service Types   
+- ClusterIP- For exposing the server on cluster-internal IP address
+- NodePort- For exposing the service through a static port on the node
+- LoadBalancer- to expose the service using an external load-balancer
+
+
 ### Creating a service
 
     kubectl apply -f my_nginx_depl.yaml
@@ -18,3 +24,8 @@
     kubectl scale deployment my-nginx --replicas=2;
     kubectl get pods -l run=my-nginx -o wide
     kubectl exec my-nginx-75897978cd-9zst8 -- printenv | grep SERVICE
+
+### Creating a headless service
+
+    kubectl create -f my_nginx_service_headless.yaml
+    kubectl get all
