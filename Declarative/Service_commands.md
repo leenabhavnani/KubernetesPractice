@@ -3,6 +3,7 @@
 - NodePort- For exposing the service through a static port on the node
 - LoadBalancer- to expose the service using an external load-balancer
 
+You can also use Ingress to expose your Service. Ingress is not a Service type, but it acts as the entry point for your cluster. It lets you consolidate your routing rules into a single resource as it can expose multiple services under the same IP address
 
 ### Creating a service
 
