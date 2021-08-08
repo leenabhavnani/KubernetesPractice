@@ -12,3 +12,4 @@ metadata:
   namespace: kube-demo-ns
 data:
   database_url: mongodb-service
+# database_url: mongodb-service.kube-demo // sharing ns resources except configMap and secrets
