@@ -13,6 +13,14 @@
     
     kubectl run nginx --image=nginx --namespace=<insert-namespace-name-here>
     kubectl get pods --namespace=<insert-namespace-name-here>
+    
     kubectl config set-context --current --namespace=<insert-namespace-name-here>
     # Validate it
     kubectl config view --minify | grep namespace:
+
+   #### Components not bound with namespace
+    # In a namespace
+    kubectl api-resources --namespaced=true
+
+    # Not in a namespace
+    kubectl api-resources --namespaced=false
