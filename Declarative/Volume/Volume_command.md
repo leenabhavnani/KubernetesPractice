@@ -1,5 +1,5 @@
 ### Configure a Pod to Use a Volume for Storage
-https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/  
+
 
          kubectl apply -f emptydir_volume_depl.yaml
          // or emptydir_volume.yaml   
@@ -18,6 +18,8 @@ https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storag
          cd /data/redis/
          ls
          kubectl delete pod redis
+         
+ https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/  
          
 ### Configure a Pod to Use a PersistentVolume for Storage using hostPath
 
