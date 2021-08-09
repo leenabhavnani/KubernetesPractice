@@ -21,7 +21,7 @@
          
  https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/  
          
-### Configure a Pod to Use a PersistentVolume for Storage using hostPath
+### Configure a Pod to Use a Volume/PersistentVolume for Storage using hostPath
 
          kubectl apply -f hostpath_volume_depl.yaml
          kubectl get all
