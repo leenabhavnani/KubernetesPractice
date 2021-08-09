@@ -1,5 +1,5 @@
 
-### Configure a Pod to Use a PersistentVolume for Storage
+### Configure a Pod to Use a PersistentVolume for Storage using hostPath
 
 https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
 
