@@ -22,7 +22,7 @@
  https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/  
          
 ### Configure a Pod to Use a Volume/PersistentVolume for Storage using hostPath
-
+   #### Volume:
          kubectl apply -f hostpath_volume_depl.yaml
          kubectl get all
          cd /data/
@@ -38,7 +38,18 @@
          cd /data/redis/
          cat test-file
          exit
-
+  #### Persistent Volume:
+         mkdir /mnt/data  
+         sudo sh -c "echo 'Hello from Kubernetes storage' > /mnt/data/index.html"
+         cat /mnt/data/index.html
+         kubectl apply -f hostpath_persistent_volume_depl.yaml
+         kubectl get pv task-pv-volume
+         kubectl get all
+         kubectl exec -it <pod name> -- /bin/bash
+         apt update
+         apt install curl
+         curl http://localhost/
+  
 https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
 
 ### ConfigMap and Secret Volume with Mosquitto
