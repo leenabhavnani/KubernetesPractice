@@ -10,7 +10,7 @@
 
     kubectl version  
     kubectl cluster-info  
-    kubectl top // Metrics
+    kubectl top <resource> // Metrics
     kubectl get nodes   
     kubectl get all  
 
