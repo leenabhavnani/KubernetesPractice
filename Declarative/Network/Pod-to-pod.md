@@ -17,5 +17,10 @@
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br>
 
 
+Example-  
 
+           env:
+              - name: SSO_ADDRESS
+              # value: "10.99.104.153"
+              value: "sso-service.default"
 
