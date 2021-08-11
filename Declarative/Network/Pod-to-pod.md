@@ -23,12 +23,13 @@ Give direct IP Address in code  || http://10.99.104.153/sso/get-password/       
 or  
 Create a service and use the service mapping as shown below   
 
-           env:
+          login-deployment.yaml  
+          env:
               - name: SSO_ADDRESS
               # value: "10.99.104.153"
               value: "sso-service.default"   
               
-http://${process.env.SSO_ADDRESS}/get-password/
+ http://${process.env.SSO_ADDRESS}/get-password/ 
 
 Code-  
 
