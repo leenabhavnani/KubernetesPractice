@@ -19,6 +19,10 @@
 
 Example-  
 
+Give direct IP Address   
+or  
+Create a service and use the service mapping as shown below   
+
            env:
               - name: SSO_ADDRESS
               # value: "10.99.104.153"
