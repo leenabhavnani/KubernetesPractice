@@ -5,6 +5,7 @@
     minikube stop  
     minikube status  
     minikube addons list   
+    kubectl config view  
 
 ### Kubectl commands -
 
@@ -20,8 +21,7 @@
     kubectl get pods  
     kubectl get pods -o wide  
     kubectl get all  
-    kubectl get events
-    kubectl config view  
+    kubectl get events      
     kubectl delete deployment my-nginx
        
 #### Create a deployment   
