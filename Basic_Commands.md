@@ -32,7 +32,7 @@
     kubectl edit deployment nginx-dep   
     
     kubectl create deployment my-apache --image=httpd
-    kubectl get pods -w
+    kubectl get pods -w  //watch the changes of scaling
     kubectl scale deployment my-apache --replicas 2
     kubectl logs deployment/my-apache  // only 1 pod at a time
     kubectl logs -l run=my-apache  //only 5 pods at a time but can be increased
