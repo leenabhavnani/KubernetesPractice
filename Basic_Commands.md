@@ -53,6 +53,7 @@
     kubectl set image deployment/my-apache httpd=httpd:2.4.12  
     kubectl rollout status deployment.apps/my-apache  
     kubectl rollout history deployment.apps/my-apache  
+    kubectl rollout history deployment.apps/my-apache --revision=3
     kubectl rollout undo deployment.apps/my-apache
     kubectl rollout status deployment.apps/my-apache  
     
