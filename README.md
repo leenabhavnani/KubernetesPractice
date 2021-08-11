@@ -9,6 +9,8 @@ Docker Toolbox on Windows: MiniKube
 Your Own Linux Host or VM: MicroK8s   
 • Installs Kubernetes right on the OS
 
+https://minikube.sigs.k8s.io/docs/start/
+
 AWS EC2   
 • https://www.radishlogic.com/kubernetes/running-minikube-in-aws-ec2-ubuntu/   
 • https://logz.io/blog/getting-started-with-kubernetes-using-microk8s/
