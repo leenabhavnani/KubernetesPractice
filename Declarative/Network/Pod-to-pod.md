@@ -19,12 +19,55 @@
 
 Example-  
 
-Give direct IP Address   
+Give direct IP Address in code  || http://10.99.104.153/sso/get-password/       `not recommended `  
 or  
 Create a service and use the service mapping as shown below   
 
            env:
               - name: SSO_ADDRESS
               # value: "10.99.104.153"
-              value: "sso-service.default"
+              value: "sso-service.default"   
+              
+http://${process.env.SSO_ADDRESS}/get-password/
 
+Code-  
+
+           apiVersion: v1
+           kind: Service
+           metadata:
+             name: sso-service
+           spec:
+             selector:
+               app: sso
+             type: ClusterIP
+             ports:
+               - protocol: TCP
+                 port: 80
+                 targetPort: 80
+                 
+            ---
+            sso-deployment.yamal
+            ---
+            login-service.yaml
+            ---            
+            apiVersion: apps/v1
+            kind: Deployment
+            metadata:
+              name: login-deployment
+            spec:
+              replicas: 1
+              selector: 
+                matchLabels:
+                  app: login
+              template:
+                metadata:
+                  labels:
+                    app: login
+                spec:
+                  containers:
+                    - name: login
+                      image: leenabhavnani/login:1.0
+                      env:
+                        - name: SSO_ADDRESS
+                          # value: "10.99.104.153"
+                          value: "sso-service.default"
