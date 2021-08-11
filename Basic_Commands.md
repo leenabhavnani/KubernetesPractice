@@ -21,7 +21,8 @@
     kubectl get pods -o wide  
     kubectl get all  
     kubectl get events
-    kubectl config view
+    kubectl config view  
+    kubectl delete deployment my-nginx
        
 #### Create a deployment   
     kubectl create deployment nginx-dep --image=nginx   
