@@ -11,7 +11,7 @@
 
     kubectl version  
     kubectl cluster-info  
-    kubectl top <resource> // Metrics
+    kubectl top pod // Metrics after enabling the addon
     kubectl get nodes   
     kubectl get all  
 
@@ -49,6 +49,13 @@
     
     //outside the pod
     curl ip_address_of_pod:80
+    
+    kubectl set image deployment/my-apache httpd=httpd:2.4.12  
+    kubectl rollout status deployment.apps/my-apache  
+    kubectl rollout history deployment.apps/my-apache  
+    kubectl rollout undo deployment.apps/my-apache
+    kubectl rollout status deployment.apps/my-apache  
+    
     kubectl get deployments nginx-dep --export -o yaml
     kubectl get deployments nginx-dep --export -o json
     kubectl delete deployment nginx-dep
@@ -70,6 +77,7 @@
 #### Addons   
     minikube addons list   
     minikube addons enable metrics-server   
+    kubectl top pod  
     kubectl get pod,svc -n kube-system   
     minikube addons disable metrics-server  
     
