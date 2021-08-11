@@ -7,6 +7,7 @@ parameters:
   type: io1
   iopsPerGB: "10"
   fsType: ext4
+reclaimPolicy: Retain
 
 ---
 apiVersion: v1
