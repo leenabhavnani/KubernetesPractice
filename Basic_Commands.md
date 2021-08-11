@@ -67,7 +67,7 @@
     kubectl get all
     curl service_ip:80
     
-### Dry Run
+#### Dry Run
     kubectl create deployment test --image nginx --dry-run -o yaml
     kubectl expose deployment/test --port 80 --dry-run -o yaml
     
