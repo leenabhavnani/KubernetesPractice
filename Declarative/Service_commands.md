@@ -35,3 +35,16 @@ You can also use **Ingress** to expose your Service. Ingress is not a Service ty
 
     kubectl create -f my_nginx_service_headless.yaml
     kubectl get all
+
+### Creating a NodePort service
+
+    kubectl apply -f nginx_app.yml  
+    //get the port and open it in the browser
+    
+### Creating a LoadBalancer Service
+
+    kubectl delete <deployment>
+    kubectl delete <service>
+    //update file nginx_app.yml 
+    kubectl apply -f nginx_app.yml  
+    
