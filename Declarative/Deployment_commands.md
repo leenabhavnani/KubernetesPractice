@@ -18,6 +18,7 @@
     curl <IP>:80
     
     kubectl get deployment my-nginx -o yaml   //check the status
+    kubectl describe service/my-nginx         //check the endpoints
     
     kubectl delete -f my_nginx_depl.yaml
     kubectl delete -f my_nginx_service.yaml
