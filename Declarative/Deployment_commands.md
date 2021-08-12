@@ -22,5 +22,7 @@
     kubectl delete -f my_nginx_depl.yaml
     kubectl delete -f my_nginx_service.yaml
     
+    kubectl apply -f my_nginx_pod.yaml
+    
  https://kubernetes.io/docs/reference/#api-reference
  
