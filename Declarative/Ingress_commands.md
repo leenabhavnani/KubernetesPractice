@@ -16,7 +16,8 @@ https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
 
     minikube addons enable ingress   
     kubectl get pods -n kube-system   // to verify the ingress controller
+    kubectl apply -f ingress_kub_dashboard.yaml
     kubectl get ingresses -n kubernetes-dashboard  or kubectl get ingress -n kubernetes-dashboard  
-    vi /etc/hosts  
+    vi /etc/hosts  //add ip_address dashboard.com 
     curl dashboard.com  
     kubectl describe ingress dashboard-ingress -n kubernetes-dashboard  
