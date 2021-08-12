@@ -35,6 +35,11 @@ You can also use **Ingress** to expose your Service. Ingress is not a Service ty
 
     kubectl create -f my_nginx_service_headless.yaml
     kubectl get all
+    
+    kubectl exec -it <pod name> bash
+    apt-get update
+    apt install dnsutils
+    nslookup headless-svc.default.svc.cluster.local
 
 ### Creating a NodePort service
 
