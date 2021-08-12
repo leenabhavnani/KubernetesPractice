@@ -25,5 +25,9 @@
     
     kubectl apply -f my_nginx_pod.yaml
     
+    //Labels and Selectors
+    
+    kubectl delete deployments,services,pods -l run=my-nginx
+    
  https://kubernetes.io/docs/reference/#api-reference
  
