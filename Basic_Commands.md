@@ -57,6 +57,13 @@
     kubectl rollout undo deployment.apps/my-apache
     kubectl rollout status deployment.apps/my-apache  
     
+    kubectl create deployment nodeapp --image=leenabhavnani/my-node-app:1.0
+    kubectl expose deployment/nodeapp --port 8080
+    curl <service ip>:8080
+    
+    kubectl set image deployment/nodeapp my-node-app=leenabhavnani/my-node-app:2.0
+    curl <service ip>:8080
+        
     kubectl get deployments nginx-dep --export -o yaml
     kubectl get deployments nginx-dep --export -o json
     kubectl delete deployment nginx-dep
