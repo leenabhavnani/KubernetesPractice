@@ -19,6 +19,11 @@ You can also use **Ingress** to expose your Service. Ingress is not a Service ty
     kubectl get endpoints
     kubectl get ep my-nginx
     
+    kubectl exec -it <pod name> bash
+    apt-get update
+    apt install dnsutils
+    nslookup my-nginx.default.svc.cluster.local
+    
     kubectl exec my-nginx-75897978cd-clnh6 -- printenv | grep SERVICE
     
     kubectl scale deployment my-nginx --replicas=0;
