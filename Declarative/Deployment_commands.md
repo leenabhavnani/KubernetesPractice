@@ -29,5 +29,8 @@
     
     kubectl delete deployments,services,pods -l run=my-nginx
     
+    Edit the deployment and add label
+     Verify the delete command
+    
  https://kubernetes.io/docs/reference/#api-reference
  
