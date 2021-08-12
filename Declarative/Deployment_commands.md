@@ -17,6 +17,8 @@
     kubectl create -f my_nginx_service.yaml
     curl <IP>:80
     
+    kubectl get deployment my-nginx -o yaml   //check the status
+    
     kubectl delete -f my_nginx_depl.yaml
     kubectl delete -f my_nginx_service.yaml
     
