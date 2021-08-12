@@ -29,7 +29,7 @@
     docker run -d -p 80:80 my-nginx:1.0
     curl localhost:80  
     
-    docker build -t my-nginx:1.0 .     
+    docker build -t leenabhavnani/my-nginx:1.0 .     
 
     docker login
     docker push leenabhavnani/my-nginx:1.0
