@@ -1,9 +1,10 @@
 ### Configure a Pod to Use a Volume for Storage
 
+An emptyDir volume is first created when a Pod is assigned to a node, and exists as long as that Pod is running on that node. As the name says, the emptyDir volume is initially empty. All containers in the Pod can read and write the same files in the emptyDir volume, though that volume can be mounted at the same or different paths in each container. When a Pod is removed from a node for any reason, the data in the emptyDir is deleted permanently.  
 
          kubectl apply -f emptydir_volume_depl.yaml
          // or emptydir_volume.yaml   
-         kubectl get pod redis --watch
+         kubectl get pods  --watch
          
          //New Terminal
          kubectl exec -it redis -- /bin/bash  
@@ -22,6 +23,7 @@
  https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/  
          
 ### Configure a Pod to Use a Volume/PersistentVolume for Storage using hostPath
+  A hostPath volume mounts a file or directory from the host node's filesystem into your Pod.  
    #### Volume:
          kubectl apply -f hostpath_volume_depl.yaml
          kubectl get all
